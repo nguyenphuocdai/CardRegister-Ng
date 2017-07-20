@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
+    <title>CardProWebsite</title>
+    <base href="/">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="<%=require('./src/assets/img/android-desktop.png')%>">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="<%=require('./src/assets/img/ios-desktop.png')%>">
+
+    <link rel="shortcut icon" href="<%=require('./src/assets/img/favicon.png')%>">
+
+	<!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="./src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/assets/css/style.css">
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="./src/assets/css/header-default.css">
+    <link rel="stylesheet" href="./src/assets/css/footer-v1.css">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="./src/assets/css/animate.css">
+    <link rel="stylesheet" href="./src/assets/css/line-icons.css">
+    <link rel="stylesheet" href="./src/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./src/assets/css/parallax-slider.css">
+    <link rel="stylesheet" href="./src/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./src/assets/css/settings.css" type="text/css" media="screen">
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="./src/assets/css/default.css" id="style_color">
+    <link rel="stylesheet" href="./src/assets/css/dark.css">
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="./src/assets/css/custom.css">
+    <!--login-->
+    <link rel="stylesheet" href="./src/assets/css/brand-buttons-inversed.css">
+    <link rel="stylesheet" href="./src/assets/css/page_log_reg_v3.css">
+</head>
+<body class="header-fixed boxed-layout container">
+
+    <app-root>loading...</app-root>
+	 <script type="text/javascript" src="./src/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./src/assets/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="./src/assets/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="./src/assets/js/back-to-top.js"></script>
+    <script type="text/javascript" src="./src/assets/js/smoothScroll.js"></script>
+    <script type="text/javascript" src="./src/assets/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="./src/assets/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script type="text/javascript" src="./src/assets/js/owl.carousel.js"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="./src/assets/js/custom.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="./src/assets/js/app.js"></script>
+    <script type="text/javascript" src="./src/assets/js/owl-carousel.js"></script>
+    <script type="text/javascript" src="./src/assets/js/style-switcher.js"></script>
+    <script type="text/javascript" src="./src/assets/js/revolution-slider.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            OwlCarousel.initOwlCarousel();
+            StyleSwitcher.initStyleSwitcher();
+            RevolutionSlider.initRSfullWidth();
+        });
+    </script>
+</body>
+</html>

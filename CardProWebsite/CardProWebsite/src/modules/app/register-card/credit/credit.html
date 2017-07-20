@@ -1,0 +1,231 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 margin-top-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Đăng ký mở thẻ</div>
+                <div class="panel-body" style="background-color: rgba(250, 235, 215, 0.17);">
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-8" style="padding-left:3px;padding-right:3px;">
+                        <!--Carousel-->
+                        <app-slide-register></app-slide-register>
+
+                        <!--Tablist-->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:5px;padding-left:1px;padding-right:1px">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-center">
+                                    <div class="list-group list-group-horizontal">
+                                        <a [routerLink]="['category1']" routerLinkActive="active" class="list-group-item">Category1 </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-center">
+                                    <div class="list-group list-group-horizontal">
+                                        <a [routerLink]="['category2']" routerLinkActive="active" class="list-group-item">Category2 </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-center">
+                                    <div class="list-group list-group-horizontal">
+                                        <a [routerLink]="['category3']" routerLinkActive="active" class="list-group-item">Category3 </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-center">
+                                    <div class="list-group list-group-horizontal">
+                                      <a [routerLink]="['category4']" routerLinkActive="active" class="list-group-item">Category4</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--End nav-nav-tabs-->
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <router-outlet></router-outlet>
+
+                            </div>
+                            <!--End tab-content-->
+                        </div>
+                        <!--End Tablist-->
+                    </div>
+                    <!--End col-md-8-->
+                    <!--Form Register-->
+                    <div class="col-lg-4 hidden-md hidden-xs hidden-sm ">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Thông tin khách hàng</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form" role="form">
+                                    <!--Fullname-->
+                                    <div class="form-group">
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input class="form-control" type="text" placeholder="Họ và Tên" />
+                                            </div>
+                                            <!--<control-messages class="isa_error" [control]="registerForm.controls.username">
+                                            </control-messages>-->
+
+                                        </div>
+                                    </div>
+                                    <!--Phone-->
+                                    <div class="form-group">
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                                <input class="form-control" type="text" placeholder="Số điện thoại">
+                                            </div>
+                                            <!--<control-messages [control]="registerForm.controls.phone"></control-messages>-->
+                                        </div>
+                                    </div>
+
+                                    <!--Email-->
+                                    <div class="form-group">
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                <input class="form-control" type="text" placeholder="Email">
+                                            </div>
+                                            <!--<span> <control-messages [control]="registerForm.controls.email"></control-messages></span>-->
+                                        </div>
+                                    </div>
+                                    <!--Address-->
+                                    <div class="form-group">
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="Address-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                <select  class="form-control">
+                                                    <option value="null" disabled selected hidden>Chọn Tỉnh/Thành Phố</option>
+                                                    <option *ngFor="let c of countries" [ngValue]="c"> {{c.name}}</option>
+                                                </select>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="Address-addon"><i class="fa fa-money"></i></span>
+                                                <select  class="form-control">
+                                                    <option value="null" disabled selected hidden>Chọn mức thu nhập</option>
+                                                    <option *ngFor="let c of averagee" [ngValue]="c"> {{c.money}}</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <button type="submit" class="btn btn-lg btn-primary btn-block"> Hoàn Tất Đăng Ký  </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Form Register-->
+                    <!--Condition Register-->
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-4" style="float:right;padding-left:3px;padding-right:3px;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Điều Kiện Đăng Ký</div>
+                                    <div class="panel-body">
+                                        <p class="condition">
+                                            + Có hộ khẩu thường trú/tạm trú trên địa bàn hoạt động của Sacombank<br /> +
+                                            Cá nhân từ 18 tuổi trở lên<br /> + Có thu nhập tối thiểu 30 triệu VND/tháng
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--End Panel Info-->
+                            </div>
+                            <!--End row-->
+                        </div>
+                        <!--End Container-Fluid-->
+                    </div>
+                    <!--Condition Register-->
+                </div>
+            </div>
+        </div>
+        <!--=== Style Switcher ===-->
+        <i class="style-switcher-btn fa fa-pencil-square-o hidden-lg">...</i>
+        <div class="style-switcher animated fadeInRight hidden-lg">
+            <div class="style-swticher-header">
+                <div class="style-switcher-heading">Đăng Ký </div>
+                <div class="theme-close"><i class="icon-close"></i></div>
+            </div>
+            <form>
+                <div class="container-fixer">
+                    <div class="col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="style-swticher-body">
+                            <!--Form Register-->
+                            <div class="col-md-12 col-xs-12 col-sm-12 hidden-lg " style="padding-left:3px;padding-right:3px;">
+                                <div class="panel panel-info">
+                                    <legend><a href="#"><i class="glyphicon glyphicon-globe"></i></a> Biểu Mẫu Đăng Ký !</legend>
+                                    <div class="panel-body">
+                                        <form action="#" method="post" role="form">
+                                            <!--Fullname-->
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                <input class="form-control" name="txtFullName" maxlength="40" type="text" placeholder="Họ và Tên" aria-describedby="fullname-addon"
+                                                       value="" required />
+                                            </div>
+
+                                            <!--Phone-->
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                                <input class="form-control" name="txtPhone" maxlength="11" id="txtPhone" type="text" placeholder="Số điện thoại" aria-describedby="phone-addon"
+                                                       value="" required>
+                                            </div>
+
+                                            <!--Email-->
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                                <input class="form-control" name="txtEmail" maxlength="40" type="text" placeholder="Email" aria-describedby="email-addon"
+                                                       value="" required>
+                                            </div>
+
+                                            <!--Address-->
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                                <select class="form-control" id="sel1">
+                                                    <option>--Chọn thành phố--</option>
+                                                    <option>Cần Thơ</option>
+                                                    <option>Hồ Chí Minh</option>
+                                                    <option>Hà Nội</option>
+                                                    <option>An Giang</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon"><i class="fa fa-money"></i></span>
+                                                <select class="form-control" id="sel1">
+                                                    <option>--Chọn mức thu nhập--</option>
+                                                    <option>< 7 triệu</option>
+                                                    <option>7 - 20 triệu</option>
+                                                    <option>> 20 triệu</option>
+                                                </select>
+                                            </div>
+
+                                            <label class="radio-inline">
+                                                <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
+                                                Nam
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
+                                                Nữ
+                                            </label>
+
+                                            <br />
+                                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                                Hoàn Tất Đăng Ký
+                                            </button>
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--End Form Register-->
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
