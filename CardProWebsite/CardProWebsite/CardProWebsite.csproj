@@ -154,6 +154,7 @@
     <Content Include="src\assets\js\smoothScroll.js" />
     <Content Include="src\assets\js\style-switcher.js" />
     <Content Include="src\modules\app\register-card\credit\carousel-register-credit.html" />
+    <Content Include="src\modules\app\register-card\credit\category\category.css" />
     <Content Include="src\modules\app\register-card\credit\category\category.html" />
     <Content Include="src\modules\app\register-card\credit\category\creditdetail.component.html" />
     <Content Include="src\modules\app\register-card\credit\credit.css" />

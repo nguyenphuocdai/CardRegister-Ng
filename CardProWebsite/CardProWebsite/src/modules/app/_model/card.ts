@@ -1,6 +1,6 @@
 ﻿export class Card {
-    id?: number;
-    cat_id: number;
+  id?: number;
+  cat_id: number;
   name: string;
   title: string;
   url: string;

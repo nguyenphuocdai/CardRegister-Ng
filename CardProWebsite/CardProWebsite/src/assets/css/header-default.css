@@ -1052,7 +1052,7 @@ body.header-fixed-space-default {
 
 	/*Logo*/
 	.header-fixed .header.header-fixed-shrink .logo img {
-		max-width: 105px;
+		/*max-width: 105px;*/
 		margin: 45px 0 -4px;
 	}
 

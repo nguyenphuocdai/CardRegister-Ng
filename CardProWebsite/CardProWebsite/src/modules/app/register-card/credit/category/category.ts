@@ -9,11 +9,14 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: 'app-category',
-    templateUrl: './category.html'
+    templateUrl: './category.html',
+    styleUrls : ['./category.css'],
 })
 export class CategoryComponent implements OnInit {
+        cards: Card;
     cardes: Card[] = [];
     id: number;
+    cat_id: number;
 
     constructor(
         private cardService: CardService,
@@ -24,21 +27,38 @@ export class CategoryComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.paramMap
-            .switchMap((params: ParamMap) => this.cardService.getCards(+params.get('cat_id')))
+            .switchMap((params: ParamMap) => this.cardService.getCards(+params.get('id')))
             .subscribe(card => {
-                this.cardes = card;
+                this.Zone.run(
+                    () => {
+                    this.cardes = card;
+                    });
             });
-        //this.getCardes(this.id);
+        this.getCardes();
+        console.log(this.cardes + ' log ok');
     }
     getCardes(): void {
-        this.cardService.getCards(this.id).then(cardes => {
-            this.Zone.run(() => {
-                this.cardes = cardes;
+        this.cardService.getCard(this.cat_id,this.id).then(cardes => {
+            this.Zone.run(
+                () => {
+                    this.cards = cardes;
             });
-
+           
         });
 
     }
+   
+    //getCardOfCate(): void
+    //{
+    //    this.cardService.getCard(this.cat_id,this.id).then(cardofcate => {
+    //        this.Zone.run(
+    //            () => { cardofcate == cardofcate });
+    //        console.log(cardofcate);
+                
+    //});
+    //}
+
+
 
     // goBack(): void {
     //   this.location.back();
