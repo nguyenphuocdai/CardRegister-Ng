@@ -14,12 +14,9 @@ import {DebitComponent} from './register-card/debit/debit';
 //service
 import { CardService } from './_services/card.service';
 //category-credit
-import { Category1Component } from './register-card/credit/category/category1.component';
-import { Category2Component } from "./register-card/credit/category/category2.component";
-
-import { Category3Component } from "./register-card/credit/category/category3.component";
-import { Category4Component } from "./register-card/credit/category/category4.component";
+import { CategoryComponent } from './register-card/credit/category/category';
 import { CreditdetailComponent } from "./register-card/credit/category/Creditdetail.component";
+import { CommonModule } from "@angular/common";
 
 export const routes: Routes = [
 
@@ -28,15 +25,9 @@ export const routes: Routes = [
     {
         path: 'credit', component: CreditComponent, data: { title: 'Thẻ thanh toán', name: 'Đăng ký' },
         children: [
-            { path: '', redirectTo: 'category1', pathMatch: 'full' },
-            { path: 'category1', component: Category1Component },
-            { path: 'category2', component: Category2Component },
-            { path: 'category3', component: Category3Component },
-            { path: 'category4', component: Category4Component },
-            { path: 'category1/:id', component: CreditdetailComponent },
-            { path: 'category2/:id', component: CreditdetailComponent },
-            { path: 'category3/:id', component: CreditdetailComponent },
-            { path: 'category4/:id', component: CreditdetailComponent }
+            { path: '', redirectTo: 'category/1', pathMatch: 'full' },
+            { path: 'category/:id', component: CategoryComponent}
+
         ],
     },
 
@@ -50,16 +41,14 @@ export const routes: Routes = [
         CreditComponent,
         CRCreditComponent,
         DebitComponent,
-        Category1Component,
-        Category2Component,
-        Category3Component,
-        Category4Component,
-        CreditdetailComponent
+        CreditdetailComponent,
+        CategoryComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
+        CommonModule,
         RouterModule.forRoot(routes)
     ],
     providers:[CardService],

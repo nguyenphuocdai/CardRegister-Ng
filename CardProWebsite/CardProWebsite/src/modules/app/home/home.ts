@@ -175,7 +175,7 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent {
 
     constructor(private route: ActivatedRoute) {
-    }
+            }
 
     ngOnInit() {
     }

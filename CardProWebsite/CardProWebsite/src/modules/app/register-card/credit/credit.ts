@@ -24,7 +24,12 @@ export class CreditComponent implements OnInit {
     selectedValuecountries = null;
 
     selectedValueaverage = null;
-
+    Item = [
+        { id: 1, name: 'Cate1' },
+        { id: 2, name: 'Cate2' },
+        { id: 3, name: 'Cate3' },
+        { id: 4, name: 'Cate4' }
+    ];
 
   
   constructor( ) { }

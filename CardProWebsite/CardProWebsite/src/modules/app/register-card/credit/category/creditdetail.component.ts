@@ -12,6 +12,10 @@ import { CardService } from '../../../_services/card.service';
   
 })
 export class CreditdetailComponent implements OnInit {
+        ngOnInit(): void {
+            throw new Error('Method not implemented.');
+        }
+
   card: Card;
   cardes : Card[];
   selectedCard : Card;
@@ -22,20 +26,20 @@ export class CreditdetailComponent implements OnInit {
     private location: Location
   ) { }
 
-  ngOnInit(): void {
-    this.route.paramMap
-      .switchMap((params: ParamMap) => this.cardService.getCard(+params.get('id')))
-      .subscribe(card => {
-        this.card = card;
-      });
-    this.Getcardes();
-  }
-  Getcardes(): void {
-  this.cardService.getCards().then(cardes => 
-    {this.cardes = cardes;
-    console.log(this.cardes);
-    });
-}
+//  ngOnInit(): void {
+//    this.route.paramMap
+//      .switchMap((params: ParamMap) => this.cardService.getCard(+params.get('id')))
+//      .subscribe(card => {
+//        this.card = card;
+//      });
+//    this.Getcardes();
+//  }
+//  Getcardes(): void {
+//  this.cardService.getCards().then(cardes => 
+//    {this.cardes = cardes;
+//    console.log(this.cardes);
+//    });
+//}
 
 
   goBack(): void {

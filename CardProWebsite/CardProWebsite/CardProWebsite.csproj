@@ -154,10 +154,7 @@
     <Content Include="src\assets\js\smoothScroll.js" />
     <Content Include="src\assets\js\style-switcher.js" />
     <Content Include="src\modules\app\register-card\credit\carousel-register-credit.html" />
-    <Content Include="src\modules\app\register-card\credit\category\category1.component.html" />
-    <Content Include="src\modules\app\register-card\credit\category\category2.component.html" />
-    <Content Include="src\modules\app\register-card\credit\category\category3.component.html" />
-    <Content Include="src\modules\app\register-card\credit\category\category4.component.html" />
+    <Content Include="src\modules\app\register-card\credit\category\category.html" />
     <Content Include="src\modules\app\register-card\credit\category\creditdetail.component.html" />
     <Content Include="src\modules\app\register-card\credit\credit.css" />
     <Content Include="src\modules\app\register-card\credit\credit.html" />
@@ -189,10 +186,7 @@
     <TypeScriptCompile Include="src\app.component.spec.ts" />
     <TypeScriptCompile Include="src\modules\app\app.module.ts" />
     <TypeScriptCompile Include="src\modules\app\register-card\credit\carousel-register-credit.ts" />
-    <TypeScriptCompile Include="src\modules\app\register-card\credit\category\category1.component.ts" />
-    <TypeScriptCompile Include="src\modules\app\register-card\credit\category\category2.component.ts" />
-    <TypeScriptCompile Include="src\modules\app\register-card\credit\category\category3.component.ts" />
-    <TypeScriptCompile Include="src\modules\app\register-card\credit\category\category4.component.ts" />
+    <TypeScriptCompile Include="src\modules\app\register-card\credit\category\category.ts" />
     <TypeScriptCompile Include="src\modules\app\register-card\credit\category\creditdetail.component.ts" />
     <TypeScriptCompile Include="src\modules\app\register-card\credit\credit.ts" />
     <TypeScriptCompile Include="src\modules\app\register-card\debit\debit.ts" />

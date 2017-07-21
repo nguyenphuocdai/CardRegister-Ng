@@ -1,0 +1,25 @@
+﻿
+<div class="container-fixer">
+    <div class="row" style="display: inline-block">
+        <div class="col-sm-6 col-md-4 col-xs-6" *ngFor="let ca of cardes">
+            <div class="thumbnail">
+                <img src="{{ca.url}}" class="img-responsive">
+                <div class="caption">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <h4>{{ca.name}}</h4>
+                            <p>{{ca.describe}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <a class="btn btn-primary btn-product" <!--[routerLink]="['/register-credit/category1', ca.id]"-->><span class="glyphicon glyphicon-thumbs-up"></span> Chi tiết</a>
+
+                        </div>
+                        <!--<div class="col-md-6 col-xs-6"> <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

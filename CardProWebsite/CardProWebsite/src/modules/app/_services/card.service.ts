@@ -4,12 +4,12 @@ import { CARDES } from '../_model/mock-card';
 @Injectable()
 export class CardService {
 
-  getCards(): Promise<Card[]> {
-    return Promise.resolve(CARDES);
+    getCards(id: number): Promise<Card[]> {
+        return Promise.resolve(CARDES).then(cards => cards.filter(card => card.cat_id == id));
   }
   constructor() { }
-  getCard(id: number): Promise<Card> {
-    return this.getCards()
+  getCard(cat_id: number, id: number): Promise<Card> {
+      return this.getCards(cat_id)
                .then(cards => cards.find(card => card.id === id));
   }
 }
