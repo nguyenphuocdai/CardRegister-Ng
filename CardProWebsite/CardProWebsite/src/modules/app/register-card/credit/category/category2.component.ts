@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { Card } from '../../../_model/card';
@@ -13,11 +13,18 @@ export class Category2Component implements OnInit {
 
   constructor(
 
-    private cardService: CardService,
+      private cardService: CardService,
+      private Zone: NgZone
   ) { }
 
   getCardes(): void {
-    this.cardService.getCards().then(cardes => this.cardes = cardes.slice(4, 7))
+      this.cardService.getCards().then(cardes => {
+          this.Zone.run(() => {
+              this.cardes = cardes.slice(7, 10);
+          });
+
+      });
+
   }
 
 

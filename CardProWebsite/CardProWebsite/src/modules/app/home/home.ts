@@ -32,7 +32,7 @@ import { ActivatedRoute } from '@angular/router';
 
                         <div class="row">
                             <div class="col-md-12 col-xs-12">
-                                <a class="btn btn-primary btn-product" routerLink="register-credit"><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
+                                <a class="btn btn-primary btn-product" routerLink="credit"><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
                             </div>
                             <!--<div class="col-md-6 col-xs-6">
                                                                 <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->
@@ -55,10 +55,10 @@ import { ActivatedRoute } from '@angular/router';
 
                         <div class="row">
                             <div class="col-md-12 col-xs-12">
-                                <a class="btn btn-primary btn-product" routerLink="register-debit" ><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
+                                <a class="btn btn-primary btn-product" routerLink="debit" ><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
                             </div>
                             <!--<div class="col-md-6 col-xs-6">
-                                                                <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->
+                            <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->
                         </div>
                     </div>
                 </div>
@@ -72,8 +72,6 @@ import { ActivatedRoute } from '@angular/router';
                                 <h3>Galaxy S5 Note5</h3>
                                 <p>32GB, 2GB Ram, 1080HD, 5.1 inches, Android</p>
                             </div>
-
-
                         </div>
 
                         <div class="row">
@@ -81,7 +79,7 @@ import { ActivatedRoute } from '@angular/router';
                                 <a class="btn btn-primary btn-product" routerLink="register-prepaid"><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
                             </div>
                             <!--<div class="col-md-6 col-xs-6">
-                                                                <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->
+                           <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->
                         </div>
                     </div>
                 </div>
