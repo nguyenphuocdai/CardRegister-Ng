@@ -32,7 +32,7 @@ import { ActivatedRoute } from '@angular/router';
 
                         <div class="row">
                             <div class="col-md-12 col-xs-12">
-                                <a class="btn btn-primary btn-product" routerLink="credit"><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
+                                <a class="btn btn-primary btn-product" routerLink="register-credit"><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
                             </div>
                             <!--<div class="col-md-6 col-xs-6">
                                                                 <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span>So sánh</a></div>-->

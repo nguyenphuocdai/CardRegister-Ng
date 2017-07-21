@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/footer';
 import { AppModule } from './modules/app/app.module';
 
 import { MDL } from './shared/utils';
+import 'zone.js/dist/zone';
 
 const routes: Routes = [
     { path: '', redirectTo: 'main/0', pathMatch: 'full' },

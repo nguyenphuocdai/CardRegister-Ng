@@ -87,18 +87,6 @@ module.exports = {
     module: {
         rules: [
             {
-
-                test: /\.(js|ts)$/,
-                exclude: [
-                    // workaround for this issue
-                    path.join(__dirname, 'node_modules', '@angular/compiler')
-                ],
-                use: [{
-                    loader: 'source-map-loader'
-                }],
-                enforce: 'pre'
-            },
-            {
                 test: /\.ts$/,
                 loaders: [
                     'awesome-typescript-loader' + (isTest ? "?inlineSourceMap=true&sourceMap=false" : ""),
