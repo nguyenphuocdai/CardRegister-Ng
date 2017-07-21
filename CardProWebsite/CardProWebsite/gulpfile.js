@@ -1,7 +1,7 @@
 (function () {
     var MSBUILD_TOOLS_VERSION = getMSBuildToolsVersion();
     var SCRIPTS = {
-        'angular-cli': 'npm install ngx-dropdown',
+        'angular-cli': 'ng serve --open',
         'install': 'npm install',
         '00-webpack-dev': 'npm run dev',
         '00-webpack-watch': 'npm run watch',

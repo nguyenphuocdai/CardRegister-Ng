@@ -20,7 +20,6 @@ import { Category2Component } from "./register-card/credit/category/category2.co
 import { Category3Component } from "./register-card/credit/category/category3.component";
 import { Category4Component } from "./register-card/credit/category/category4.component";
 import { CreditdetailComponent } from "./register-card/credit/category/Creditdetail.component";
-
 export const routes: Routes = [
 
     { path: '', component: HomeComponent, data: { title: 'Trang chủ', name: 'Giới thiệu' } },

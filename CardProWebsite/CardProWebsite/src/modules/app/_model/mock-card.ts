@@ -2,7 +2,7 @@
 
 export const CARDES: Card[] = [
   { id: 1, name: 'Visa Infinite', title:'title1', url: 'src/assets/img/card1.jpg',describe:'32GB, 2GB Ram, 1080HD, 5.1 inches, Android' },
-  { id: 2, name: 'World MasterCard', title: 'title2', url: 'src/assets/img/card2.jpg',describe:'42GB, 23GB Ram, 1080HD, 5.1 inches, IOS' },
+  { id: 2, name: 'MasterCard', title: 'title2', url: 'src/assets/img/card2.jpg',describe:'42GB, 23GB Ram, 1080HD, 5.1 inches, IOS' },
   { id: 3, name: 'Visa Signature', title: 'title3', url: 'src/assets/img/card3.jpg',describe:'3442GB, 2GB Ram, 1080HD, 5.1 inches, Android'},
   { id: 4, name: 'Visa Platinum', title: 'title4', url: 'src/assets/img/card4.jpg',describe:'32GB, 2GB Ram, 1080HD, 5.1 inches, Android' },
   { id: 5, name: 'Thẻ tín dụng Doanh Nghiệp', title: 'title5', url: 'src/assets/img/card2.jpg',describe:'42GB, 23GB Ram, 1080HD, 5.1 inches, IOS' },
