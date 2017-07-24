@@ -6,56 +6,72 @@ import { Card } from '../../../_model/card';
 import { CARDES } from '../../../_model/mock-card';
 import { CardService } from '../../../_services/card.service';
 
+import { Feature } from '../../../_model/feature';
+import { FEATURE } from '../../../_model/feature-card';
+import { FeatureService } from '../../../_services/feature.service';
+
 @Component({
     selector: 'app-creditdetail',
-    templateUrl: './creditdetail.component.html'
+    templateUrl: './creditdetail.component.html',
+    styleUrls: ['./creditdetail.component.css']
 
 })
 export class CreditdetailComponent implements OnInit {
 
-    card : Card;
+    card: Card;
     cards: Card[] = [];
+    cardes: Card[] = [];
     selectedCard: Card;
     cat_id: number;
     id: number;
+    features: Feature[] = [];
 
     constructor(
         private cardService: CardService,
+        private featureService : FeatureService,
         private route: ActivatedRoute,
         private location: Location,
         private Zone: NgZone
-    ) { 
-
+    ) {
+        this.Getcardes();
     }
 
     ngOnInit(): void {
         this.route.params
             .subscribe(params => {
-            this.cat_id = +params['cat_id'];
-            this.id = +params['id'];
-            this.cardService.getDetailCards(this.cat_id)
-                .then(cards => {
-                    this.Zone.run(
-                        () => {
-                            this.cards = cards;
-                            console.log(this.cards + ' log ok');
-                        });
-                });
-            this.getCard();
-        });
+                this.cat_id = +params['cat_id'];
+                this.id = +params['id'];
+                this.cardService.getDetailCards(this.cat_id)
+                    .then(cards => {
+                        this.Zone.run(
+                            () => {
+                                this.cards = cards;
+                                console.log(this.cards + ' log ok');
+                            });
+                    });
+                this.getCard();
+                this.GetFeature();
+            });
 
-        
+
     }
     getCard(): void {
         this.cardService.getgetDetailCard(this.id, this.cat_id).then(card => {
             this.Zone.run(
                 () => {
                     this.card = card;
-                    console.log(this.card);
-                    console.log(this.card.url);
                 });
-           
+
         });
+    }
+
+    //compare
+    Getcardes(): void {
+        this.cardService.getCardes()
+            .then(card => {
+                this.cardes = card;
+                console.log(this.cardes);
+            });
     }
 
     goBack(): void {
@@ -63,7 +79,18 @@ export class CreditdetailComponent implements OnInit {
     }
 
     onSelect(card: Card): void {
-        this.selectedCard = card;
+        this.Zone.run(
+            () => {
+                this.selectedCard = card;
+            });
+    }
+    //feature
+    GetFeature(): void {
+        this.featureService.getFeatures()
+            .then(feature => {
+                this.features = feature;
+                console.log(this.features);
+            });
     }
 
 

@@ -17,6 +17,8 @@ import { CardService } from './_services/card.service';
 import { CategoryComponent } from './register-card/credit/category/category';
 import { CreditdetailComponent } from "./register-card/credit/category/Creditdetail.component";
 import { CommonModule } from "@angular/common";
+import { NgSwitch, NgSwitchCase } from "@angular/common";
+import { FeatureService } from "./_services/feature.service";
 
 export const routes: Routes = [
 
@@ -51,9 +53,9 @@ export const routes: Routes = [
         FormsModule,
         HttpModule,
         CommonModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
     ],
-    providers:[CardService],
+    providers: [CardService, FeatureService],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
     ],

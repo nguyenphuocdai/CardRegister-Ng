@@ -91,99 +91,35 @@
                     <div class="col-sm-6 col-md-4" style="margin-bottom:20px">
                         <label class="control-label" for="company">Chọn thẻ so sánh</label>
                         <select id="company" class="form-control" [(ngModel)]="selectedCard" (ngModelChange)="onSelect($event)">
-                            <option >11</option>
+                            <option value="null" disabled selected hidden>Chọn Thẻ</option>
+                            <option *ngFor ="let item of cardes" [ngValue]="item">{{item.id}}-{{item.name}}</option>
                         </select>
                     </div>
+                    <table *ngIf="selectedCard && selectedCard.id != card.id">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>
+                                    <!-- <img class="img-responsive" style="display: inline-table;" src="/assets/img/card1.jpg" align="middle" height="150" width="150">  -->
+                                    <img class="img-responsive" style="display: inline-table;" src="{{card.url}}" align="middle" height="150" width="150">
+                                </th>
+                                <th>
+                                    <img class="img-responsive" style="display: inline-table;" src="{{selectedCard.url}}" align="middle" height="150" width="150">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let fea of features">
+                                <td>{{fea.name}}</td>
+                                <td><b class="check">✔</b></td>
+                                <td><b class="check">✔</b></td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
                 </div>
                 <!--end dropdown list  -->
-                <table *ngIf="selectedCard">
-                    <thead>
-                        <tr [ngSwitch]="selectedCard.id">
-                            <th>&nbsp;</th>
-                            <th>
-                                <!-- <img class="img-responsive" style="display: inline-table;" src="/assets/img/card1.jpg" align="middle" height="150" width="150">  -->
-                                <img class="img-responsive" style="display: inline-table;" src="{{card.url}}" align="middle" height="150" width="150">
-                            </th>
-                            <th *ngSwitchCase="2">
-                                ...
-                            </th>
-                            <th>Product 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Feature 1</td>
-                            <td><b class="check">✔</b></td>
-                            <td><b class="check">✔</b></td>
-                            <td><b class="check">✔</b></td>
-                        </tr>
-                        <tr>
-                            <td>Feature 2</td>
-                            <td>&mdash;</td>
-                            <td><b class="check">✔</b></td>
-                        </tr>
-                        <tr>
-                            <td>Feature 3</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td><b class="check">✔</b></td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                        <tr>
-                            <td>Feature 4</td>
-                            <td>&mdash;</td>
-                            <td>&mdash;</td>
-                        </tr>
-                    </tbody>
-                </table>
+                
                 <p class="p">Demo by Adrian Sandu. <a href="#" target="_blank">See article</a>.</p>
             </div>
         </div>

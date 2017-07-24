@@ -157,6 +157,7 @@
     <Content Include="src\modules\app\register-card\credit\carousel-register-credit.html" />
     <Content Include="src\modules\app\register-card\credit\category\category.css" />
     <Content Include="src\modules\app\register-card\credit\category\category.html" />
+    <Content Include="src\modules\app\register-card\credit\category\creditdetail.component.css" />
     <Content Include="src\modules\app\register-card\credit\category\creditdetail.component.html" />
     <Content Include="src\modules\app\register-card\credit\credit.css" />
     <Content Include="src\modules\app\register-card\credit\credit.html" />
@@ -195,8 +196,11 @@
     <TypeScriptCompile Include="src\modules\app\home\slider-carousel\carousel.ts" />
     <TypeScriptCompile Include="src\modules\app\home\slider-carousel\image.interface.ts" />
     <TypeScriptCompile Include="src\modules\app\_model\card.ts" />
+    <TypeScriptCompile Include="src\modules\app\_model\feature-card.ts" />
+    <TypeScriptCompile Include="src\modules\app\_model\feature.ts" />
     <TypeScriptCompile Include="src\modules\app\_model\mock-card.ts" />
     <TypeScriptCompile Include="src\modules\app\_services\card.service.ts" />
+    <TypeScriptCompile Include="src\modules\app\_services\feature.service.ts" />
     <TypeScriptCompile Include="src\shared\footer.ts" />
     <TypeScriptCompile Include="src\shared\header.ts" />
     <TypeScriptCompile Include="src\shared\utils.ts" />
