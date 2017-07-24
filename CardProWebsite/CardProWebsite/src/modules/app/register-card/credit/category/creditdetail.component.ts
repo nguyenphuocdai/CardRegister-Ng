@@ -93,5 +93,12 @@ export class CreditdetailComponent implements OnInit {
             });
     }
 
+    HasFeature(features: number[], feature_id: number): boolean {
+        for (let i = 0; i < features.length; i++) {
+            if (features[i] == feature_id)
+                return true;
+        }
+        return false;
+    }
 
 }

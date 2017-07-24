@@ -111,8 +111,9 @@
                         <tbody>
                             <tr *ngFor="let fea of features">
                                 <td>{{fea.name}}</td>
-                                <td><b class="check">✔</b></td>
-                                <td><b class="check">✔</b></td>
+                                <td><b class="check" *ngIf="HasFeature(card.features,fea.id)">✔</b></td>
+                                <td><b class="check" *ngIf="HasFeature(selectedCard.features,fea.id)">✔</b>           
+                                </td>
                             </tr>
                         
                         </tbody>
