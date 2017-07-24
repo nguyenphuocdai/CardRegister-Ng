@@ -109,6 +109,7 @@
     <Content Include="src\assets\css\font-awesome.min.css" />
     <Content Include="src\assets\css\footer-v1.css" />
     <Content Include="src\assets\css\header-default.css" />
+    <Content Include="src\assets\css\header-v1.css" />
     <Content Include="src\assets\css\line-icons.css" />
     <Content Include="src\assets\css\owl.carousel.css" />
     <Content Include="src\assets\css\page_log_reg_v3.css" />
