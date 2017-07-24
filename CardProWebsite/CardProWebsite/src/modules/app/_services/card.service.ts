@@ -23,7 +23,7 @@ export class CardService {
     {
         return Promise.resolve(CARDES).then(cards => cards.filter(card => card.cat_id == cat_id))
     }
-    getgetDetailCard(id: number,cat_id: number): Promise<Card>
+    getDetailCard(id: number,cat_id: number): Promise<Card>
     {
         return this.getDetailCards(cat_id)
             .then(cards => cards.find(card => card.id === id));

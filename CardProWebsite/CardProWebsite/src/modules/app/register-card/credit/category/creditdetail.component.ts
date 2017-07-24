@@ -17,7 +17,6 @@ import { FeatureService } from '../../../_services/feature.service';
 
 })
 export class CreditdetailComponent implements OnInit {
-
     card: Card;
     cards: Card[] = [];
     cardes: Card[] = [];
@@ -25,6 +24,7 @@ export class CreditdetailComponent implements OnInit {
     cat_id: number;
     id: number;
     features: Feature[] = [];
+    private selectUndefinedOptionValue: any;
 
     constructor(
         private cardService: CardService,
@@ -56,10 +56,11 @@ export class CreditdetailComponent implements OnInit {
 
     }
     getCard(): void {
-        this.cardService.getgetDetailCard(this.id, this.cat_id).then(card => {
+        this.cardService.getDetailCard(this.id, this.cat_id).then(card => {
             this.Zone.run(
                 () => {
                     this.card = card;
+                    
                 });
 
         });

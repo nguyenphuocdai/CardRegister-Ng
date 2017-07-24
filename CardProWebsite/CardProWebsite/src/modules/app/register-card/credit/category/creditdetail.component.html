@@ -91,8 +91,8 @@
                     <div class="col-sm-6 col-md-4" style="margin-bottom:20px">
                         <label class="control-label" for="company">Chọn thẻ so sánh</label>
                         <select id="company" class="form-control" [(ngModel)]="selectedCard" (ngModelChange)="onSelect($event)">
-                            <option value="null" disabled selected hidden>Chọn Thẻ</option>
-                            <option *ngFor ="let item of cardes" [ngValue]="item">{{item.id}}-{{item.name}}</option>
+                            <option disabled hidden [value]="selectUndefinedOptionValue">Chọn thẻ</option>
+                            <option *ngFor ="let item of cardes" [ngValue]="item" [disabled]="item === selectedCard">{{item.id}}-{{item.name}}</option>
                         </select>
                     </div>
                     <table *ngIf="selectedCard && selectedCard.id != card.id">
@@ -111,8 +111,11 @@
                         <tbody>
                             <tr *ngFor="let fea of features">
                                 <td>{{fea.name}}</td>
-                                <td><b class="check" *ngIf="HasFeature(card.features,fea.id)">✔</b></td>
-                                <td><b class="check" *ngIf="HasFeature(selectedCard.features,fea.id)">✔</b>           
+                                <td><b class="check" *ngIf="HasFeature(card.features,fea.id); else Block">✔</b>
+                                    <ng-template #Block>&mdash;</ng-template>
+                                </td>
+                                <td><b class="check" *ngIf="HasFeature(selectedCard.features,fea.id); else elseBlock">✔</b>
+                                    <ng-template #elseBlock>&mdash;</ng-template>
                                 </td>
                             </tr>
                         
