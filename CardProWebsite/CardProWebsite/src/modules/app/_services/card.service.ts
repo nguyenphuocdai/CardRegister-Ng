@@ -10,14 +10,23 @@ export class CardService {
     }
     //get id card of cat_id
   constructor() { }
-  getCard(cat_id: number, id: number): Promise<Card> {
+    getCard(cat_id: number, id: number): Promise<Card> {
       return this.getCards(cat_id)
           .then(cards => cards.find(card => card.id === id));
-
-
-  }
+    }
     //get all card
-  getCardes(): Promise<Card[]> {
+    getCardes(): Promise<Card[]> {
       return Promise.resolve(CARDES);
-  }
+     }
+  //get name card 
+    getDetailCards(cat_id: number): Promise<Card[]>
+    {
+        return Promise.resolve(CARDES).then(cards => cards.filter(card => card.cat_id == cat_id))
+    }
+    getgetDetailCard(id: number,cat_id: number): Promise<Card>
+    {
+        return this.getDetailCards(cat_id)
+            .then(cards => cards.find(card => card.id === id));
+    }
+
 }

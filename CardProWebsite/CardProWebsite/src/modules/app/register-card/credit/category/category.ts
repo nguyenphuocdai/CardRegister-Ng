@@ -13,7 +13,7 @@ import 'rxjs/add/operator/switchMap';
     styleUrls : ['./category.css'],
 })
 export class CategoryComponent implements OnInit {
-        cards: Card;
+    cards: Card;
     cardes: Card[] = [];
     id: number;
     cat_id: number;
@@ -23,6 +23,8 @@ export class CategoryComponent implements OnInit {
         private Zone: NgZone,
         private route: ActivatedRoute,
     ) {
+        
+       
     }
 
     ngOnInit(): void {
@@ -31,11 +33,10 @@ export class CategoryComponent implements OnInit {
             .subscribe(card => {
                 this.Zone.run(
                     () => {
-                    this.cardes = card;
+                        this.cardes = card;
                     });
             });
         this.getCardes();
-        console.log(this.cardes + ' log ok');
     }
     getCardes(): void {
         this.cardService.getCard(this.cat_id,this.id).then(cardes => {

@@ -26,9 +26,11 @@ export const routes: Routes = [
         path: 'credit', component: CreditComponent, data: { title: 'Thẻ thanh toán', name: 'Đăng ký' },
         children: [
             { path: '', redirectTo: 'category/1', pathMatch: 'full' },
-            { path: 'category/:id', component: CategoryComponent}
+            { path: 'category/:id', component: CategoryComponent },
+            { path: 'category/:cat_id/:id', component: CreditdetailComponent }
             
         ],
+
     },
 
     { path: '**', redirectTo: '' }

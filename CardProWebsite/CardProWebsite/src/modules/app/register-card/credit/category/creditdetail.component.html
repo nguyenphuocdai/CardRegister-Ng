@@ -1,164 +1,191 @@
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Thông tin chi tiết</h3>
-  </div>
-  <div class="panel-body">
-    <div class="main-container" *ngIf="card">
-      <div class="col-sm-6 col-md-4 col-xs-12" style="margin-top: 10px">
-        <div class="thumbnail" style="border:none">
-          <img class="img-responsive" src="{{card.url}}" />
-        </div>
-        <ul>
-          <li>Integer et malesuada turpis. Proin urna felis.</li>
-          <li>Integer et malesuada turpis. Proin urna felis.</li>
-        </ul>
-      </div>
-
-      <div class="col-sm-6 col-md-8 col-xs-12">
-        <h2>{{card.name}}</h2>
-        <div class="row">
-
-          <div class="col-md-12 col-sm-12">
-
-            <ul>
-              <li>{{card.describe}}</li>
-              <li>Integer et malesuada turpis. Proin urna felis.</li>
-              <li>Integer et malesuada turpis. Proin urna felis.</li>
-              <li>Integer et malesuada turpis. Proin urna felis.</li>
-              <li>Integer et malesuada turpis. Proin urna felis.</li>
-
-            </ul>
-            <p>Morbi laoreet ipsum sem, eu condimentum ante efficitur vel. Donec at nibh risus. Nam mollis nulla eget scelerisque
-              facilisis. Suspendisse sit amet condimentum dolor. Vestibulum euismod congue mi pulvinar dignissim. </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+﻿<div class="container-fluid" >
     <div class="row">
-      <div class="col-lg-12" style="margin-bottom:5px;">
-        <button style="margin-left:15px;" class="btn-u" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn btn-primary pull-left"
-          value="">So Sánh Thẻ</button>
+        <div class="col-md-12"  *ngIf="card">
+            <div class="row">
+                <div class="col-md-4">
 
-        <a (click)="goBack()"><button class="btn btn-primary pull-right" >Trở về</button></a>
-      </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-responsive" alt="Bootstrap Image Preview" src="{{card.url}}" />
+                        </div>
+                    </div>
+                    <br />
+                    <address>
+                        <span class="label label-default">Thông tin chi tiết {{card.name}}</span>
+                    </address>
+                </div>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <span class="label label-default">Feature {{card.name}}</span>
+                    <div class="panel-group" id="panel-26518">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="panel-title" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-537871">Feature Item #1</a>
+                            </div>
+                            <div id="panel-element-537871" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                   {{card.describe}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="panel-title collapsed"  data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281718">Feature Item #2</a>
+                            </div>
+                            <div id="panel-element-281718" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Anim pariatur cliche...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281728">Feature Item #3</a>
+                            </div>
+                            <div id="panel-element-281728" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Anim pariatur cliche...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281719">Feature Item #4</a>
+                            </div>
+                            <div id="panel-element-281719" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Anim pariatur cliche...
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
 
-    </div>
-  </div>
-
-</div>
-<!--show modal compare -->
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-        <h4 id="myLargeModalLabel2" class="modal-title">So sánh thẻ </h4>
-      </div>
-      <div class="modal-body">
-
-        <!--dropdown list  -->
-        <div class="form-group" >
-          
-          <div class="col-sm-6 col-md-4" style="margin-bottom:20px">
-            <label class="control-label" for="company">Chọn thẻ so sánh</label>
-            <select id="company" class="form-control"   [(ngModel)]="selectedCard" (ngModelChange)="onSelect($event)" >
-             <option *ngFor ="let item of cardes"  [ngValue]="item">{{item.id}}-{{item.name}}</option> 
-            </select>
-          </div>
+            <div class="row">
+                <div class="col-lg-12" style="margin-bottom:5px;">
+                    <button style="margin-left:15px;" class="btn-u" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn btn-primary pull-left"
+                            value="">
+                        So Sánh Thẻ
+                    </button>
+                    <button (click)="goBack()" class="btn btn-primary pull-right">Trở về</button>
+                </div>
+            </div>
         </div>
-        <!--end dropdown list  -->
-        <table *ngIf="selectedCard">
-          <thead>
-            <tr [ngSwitch]="selectedCard.id">
-              <th>&nbsp;</th>
-              <th>
-                <!-- <img class="img-responsive" style="display: inline-table;" src="/assets/img/card1.jpg" align="middle" height="150" width="150">  -->
-                <img class="img-responsive" style="display: inline-table;" src="{{card.url}}" align="middle" height="150" width="150"></th>
-              <th *ngSwitchCase="2">
-                ...
-              </th>
-              <th>Product 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Feature 1</td>
-              <td><b class="check">✔</b></td>
-              <td><b class="check">✔</b></td>
-              <td><b class="check">✔</b></td>
-            </tr>
-            <tr>
-              <td>Feature 2</td>
-              <td>&mdash;</td>
-              <td><b class="check">✔</b></td>
-            </tr>
-            <tr>
-              <td>Feature 3</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td><b class="check">✔</b></td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-            </tr>
-
-          </tbody>
-        </table>
-
-        <p class="p">Demo by Adrian Sandu. <a href="#" target="_blank">See article</a>.</p>
-      </div>
     </div>
-  </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <h4 id="myLargeModalLabel2" class="modal-title">So sánh thẻ </h4>
+            </div>
+            <div class="modal-body">
+                <!--dropdown list  -->
+                <div class="form-group">
+
+                    <div class="col-sm-6 col-md-4" style="margin-bottom:20px">
+                        <label class="control-label" for="company">Chọn thẻ so sánh</label>
+                        <select id="company" class="form-control" [(ngModel)]="selectedCard" (ngModelChange)="onSelect($event)">
+                            <option >11</option>
+                        </select>
+                    </div>
+                </div>
+                <!--end dropdown list  -->
+                <table *ngIf="selectedCard">
+                    <thead>
+                        <tr [ngSwitch]="selectedCard.id">
+                            <th>&nbsp;</th>
+                            <th>
+                                <!-- <img class="img-responsive" style="display: inline-table;" src="/assets/img/card1.jpg" align="middle" height="150" width="150">  -->
+                                <img class="img-responsive" style="display: inline-table;" src="{{card.url}}" align="middle" height="150" width="150">
+                            </th>
+                            <th *ngSwitchCase="2">
+                                ...
+                            </th>
+                            <th>Product 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feature 1</td>
+                            <td><b class="check">✔</b></td>
+                            <td><b class="check">✔</b></td>
+                            <td><b class="check">✔</b></td>
+                        </tr>
+                        <tr>
+                            <td>Feature 2</td>
+                            <td>&mdash;</td>
+                            <td><b class="check">✔</b></td>
+                        </tr>
+                        <tr>
+                            <td>Feature 3</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td><b class="check">✔</b></td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td>Feature 4</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="p">Demo by Adrian Sandu. <a href="#" target="_blank">See article</a>.</p>
+            </div>
+        </div>
+    </div>
 </div>

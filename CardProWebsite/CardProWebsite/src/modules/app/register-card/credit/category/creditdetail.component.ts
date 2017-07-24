@@ -1,54 +1,70 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import 'rxjs/add/operator/switchMap';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Location }   from '@angular/common';
+import { Location } from '@angular/common';
 import { Card } from '../../../_model/card';
 import { CARDES } from '../../../_model/mock-card';
 import { CardService } from '../../../_services/card.service';
 
 @Component({
-  selector: 'app-creditdetail',
-  templateUrl: './creditdetail.component.html'
-  
+    selector: 'app-creditdetail',
+    templateUrl: './creditdetail.component.html'
+
 })
 export class CreditdetailComponent implements OnInit {
-        ngOnInit(): void {
-            throw new Error('Method not implemented.');
-        }
 
-  card: Card;
-  cardes : Card[];
-  selectedCard : Card;
+    card : Card;
+    cards: Card[] = [];
+    selectedCard: Card;
+    cat_id: number;
+    id: number;
 
-  constructor(
-    private cardService: CardService,
-    private route: ActivatedRoute,
-    private location: Location
-  ) { }
+    constructor(
+        private cardService: CardService,
+        private route: ActivatedRoute,
+        private location: Location,
+        private Zone: NgZone
+    ) { 
 
-//  ngOnInit(): void {
-//    this.route.paramMap
-//      .switchMap((params: ParamMap) => this.cardService.getCard(+params.get('id')))
-//      .subscribe(card => {
-//        this.card = card;
-//      });
-//    this.Getcardes();
-//  }
-//  Getcardes(): void {
-//  this.cardService.getCards().then(cardes => 
-//    {this.cardes = cardes;
-//    console.log(this.cardes);
-//    });
-//}
+    }
 
+    ngOnInit(): void {
+        this.route.params
+            .subscribe(params => {
+            this.cat_id = +params['cat_id'];
+            this.id = +params['id'];
+            this.cardService.getDetailCards(this.cat_id)
+                .then(cards => {
+                    this.Zone.run(
+                        () => {
+                            this.cards = cards;
+                            console.log(this.cards + ' log ok');
+                        });
+                });
+            this.getCard();
+        });
 
-  goBack(): void {
-  this.location.back();
-  }
+        
+    }
+    getCard(): void {
+        this.cardService.getgetDetailCard(this.id, this.cat_id).then(card => {
+            this.Zone.run(
+                () => {
+                    this.card = card;
+                    console.log(this.card);
+                    console.log(this.card.url);
+                });
+           
+        });
+    }
 
-  onSelect(card: Card): void {
-    this.selectedCard = card;
-  }
+    goBack(): void {
+        this.location.back();
+    }
+
+    onSelect(card: Card): void {
+        this.selectedCard = card;
+    }
 
 
 }
