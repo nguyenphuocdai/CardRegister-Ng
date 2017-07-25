@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-md-12 col-sm-12" style="border-radius: 15px 50px 30px 5px">
+        <div class="col-sm-6 col-md-4 col-xs-6" *ngFor="let pro of product">
+            <div class="thumbnail">
+                <img src="{{pro.url}}" class="img-responsive">
+                <div class="caption">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <h3>{{pro.name}}</h3>
+                            <p>{{pro.describe}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <a class="btn btn-primary btn-product" routerLink="credit"><span class="glyphicon glyphicon-thumbs-up"></span>Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+</div>

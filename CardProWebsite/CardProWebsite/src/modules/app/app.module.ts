@@ -20,6 +20,8 @@ import { CommonModule } from "@angular/common";
 import { NgSwitch, NgSwitchCase } from "@angular/common";
 import { FeatureService } from "./_services/feature.service";
 import { AuthService } from "./_services/auth.service";
+import { ProductComponent } from "./home/product";
+import { CardProductComponent } from "./home/card-product";
 
 export const routes: Routes = [
 
@@ -46,7 +48,9 @@ export const routes: Routes = [
         CRCreditComponent,
         DebitComponent,
         CreditdetailComponent,
-        CategoryComponent
+        CategoryComponent,
+        ProductComponent,
+        CardProductComponent
     ],
     imports: [
         BrowserModule,
