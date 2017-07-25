@@ -19,6 +19,7 @@ import { CreditdetailComponent } from "./register-card/credit/category/Creditdet
 import { CommonModule } from "@angular/common";
 import { NgSwitch, NgSwitchCase } from "@angular/common";
 import { FeatureService } from "./_services/feature.service";
+import { AuthService } from "./_services/auth.service";
 
 export const routes: Routes = [
 
@@ -30,7 +31,6 @@ export const routes: Routes = [
             { path: '', redirectTo: 'category/1', pathMatch: 'full' },
             { path: 'category/:id', component: CategoryComponent },
             { path: 'category/:cat_id/:id', component: CreditdetailComponent }
-            
         ],
 
     },
@@ -55,7 +55,7 @@ export const routes: Routes = [
         CommonModule,
         RouterModule.forRoot(routes),
     ],
-    providers: [CardService, FeatureService],
+    providers: [CardService, FeatureService, AuthService],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
     ],

@@ -141,7 +141,9 @@
     <Content Include="src\assets\img\img4.jpg" />
     <Content Include="src\assets\img\ios-desktop.png" />
     <Content Include="src\assets\img\logo.png" />
+    <Content Include="src\assets\img\logoscb.png" />
     <Content Include="src\assets\js\app.js" />
+    <Content Include="src\assets\js\auth0.min.js" />
     <Content Include="src\assets\js\back-to-top.js" />
     <Content Include="src\assets\js\bootstrap.min.js" />
     <Content Include="src\assets\js\custom.js" />
@@ -154,6 +156,7 @@
     <Content Include="src\assets\js\revolution-slider.js" />
     <Content Include="src\assets\js\smoothScroll.js" />
     <Content Include="src\assets\js\style-switcher.js" />
+    <Content Include="src\modules\app\callback\callback.html" />
     <Content Include="src\modules\app\register-card\credit\carousel-register-credit.html" />
     <Content Include="src\modules\app\register-card\credit\category\category.css" />
     <Content Include="src\modules\app\register-card\credit\category\category.html" />
@@ -164,6 +167,7 @@
     <Content Include="src\modules\app\register-card\debit\debit.html" />
     <Content Include="src\modules\app\home\slider-carousel\carousel.css" />
     <Content Include="src\modules\app\home\slider-carousel\carousel.html" />
+    <Content Include="src\shared\header.html" />
     <Content Include="Web.config" />
     <Content Include="src\assets\fonts\fontawesome-webfont3295.eot" />
     <Content Include="src\assets\fonts\fontawesome-webfont3295.ttf" />
@@ -199,6 +203,7 @@
     <TypeScriptCompile Include="src\modules\app\_model\feature-card.ts" />
     <TypeScriptCompile Include="src\modules\app\_model\feature.ts" />
     <TypeScriptCompile Include="src\modules\app\_model\mock-card.ts" />
+    <TypeScriptCompile Include="src\modules\app\_services\auth.service.ts" />
     <TypeScriptCompile Include="src\modules\app\_services\card.service.ts" />
     <TypeScriptCompile Include="src\modules\app\_services\feature.service.ts" />
     <TypeScriptCompile Include="src\shared\footer.ts" />
