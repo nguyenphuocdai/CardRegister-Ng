@@ -23,6 +23,9 @@ import { AuthService } from "./_services/auth.service";
 import { ProductComponent } from "./home/product";
 import { CardProductComponent } from "./home/card-product";
 
+//import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 export const routes: Routes = [
 
     { path: '', component: HomeComponent, data: { title: 'Trang chủ', name: 'Giới thiệu' } },
@@ -57,6 +60,7 @@ export const routes: Routes = [
         FormsModule,
         HttpModule,
         CommonModule,
+        InfiniteScrollModule,
         RouterModule.forRoot(routes),
     ],
     providers: [CardService, FeatureService, AuthService],
