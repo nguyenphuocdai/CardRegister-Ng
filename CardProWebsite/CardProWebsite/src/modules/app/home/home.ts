@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'home',
-    templateUrl : './home.html',
+    templateUrl: './home.html',
+    styleUrls: ['./home.css']
 })
 export class HomeComponent {
 

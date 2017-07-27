@@ -16,9 +16,9 @@ export class CarouselComponent implements OnInit {
 }
 // add image -> binding to view 
 var IMAGES: Image[] = [
-	{ "title": "We are covered", "url": "./src/assets/img/1.jpg" },
-	{ "title": "Generation Gap", "url": "./src/assets/img/2.jpg" },
-	{ "title": "Potter Me", "url": "./src/assets/img/3.jpg" },
-	{ "title": "Pre-School Kids", "url": "./src/assets/img/4.jpg" },
+	{ "title": "We are covered", "url": "./src/assets/img/10.jpg" },
+	{ "title": "Generation Gap", "url": "./src/assets/img/10.jpg" },
+	{ "title": "Potter Me", "url": "./src/assets/img/10.jpg" },
+	{ "title": "Pre-School Kids", "url": "./src/assets/img/10.jpg" },
 	{ "title": "Young Peter Cech", "url": "./src/assets/img/10.jpg" }	
 ];

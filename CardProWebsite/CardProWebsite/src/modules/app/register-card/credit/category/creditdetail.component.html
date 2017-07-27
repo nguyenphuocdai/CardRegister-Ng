@@ -1,49 +1,84 @@
-﻿<div class="container-fluid" >
+﻿<div class="container-fluid">
     <div class="row">
-        <div class="col-md-12"  *ngIf="card">
+        <div class="col-md-12" *ngIf="card">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4 col-xs-4">
 
                     <div class="row">
                         <div class="col-md-12">
-                            <img class="img-responsive" alt="Bootstrap Image Preview" src="{{card.url}}" />
+                            <div class="card" style="width: 20rem;">
+                                <img class="img-responsive" alt="Bootstrap Image Preview" src="{{card.url}}" />
+                            </div>
+
                         </div>
                     </div>
                     <br />
-                    <address>
-                        <span class="label label-default">Thông tin chi tiết {{card.name}}</span>
-                    </address>
                 </div>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <span class="label label-default">Feature {{card.name}}</span>
+                <div class="col-md-6 col-md-offset-2 col-sm-6 col-sm-offset-2 hidden-xs">
+                    <h4 style="margin:unset">Feature nỗi bật</h4>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <span class="label label-default">Thông tin thẻ {{card.name}}</span>
+                    <br />
                     <div class="panel-group" id="panel-26518">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a class="panel-title" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-537871">Feature Item #1</a>
+                                <a class="panel-title" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-537871">Đặc quyền cao cấp</a>
                             </div>
                             <div id="panel-element-537871" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                   {{card.describe}}
+                                    <ul>
+                                        <li>Hạn mức tín dụng tối đa không giới hạn</li>
+                                        <li>Thẻ mạ vàng thể hiện đẳng cấp tuyệt đối</li>
+                                        <li>Đặc quyền sử dụng phòng chờ VIP tại sân bay không giới hạn</li>
+                                        <li>Gói bảo hiểm du lịch toàn cầu với giá trị bồi thường lên đến 1 triệu USD</li>
+                                        <li>Ưu đãi thường niên: miễn phí chơi Golf/dịch vụ Spa và đêm nghỉ dưỡng tại resort cao cấp</li>
+                                        <li>Tổng đài tư vấn và hỗ trợ toàn cầu 24/7</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a class="panel-title collapsed"  data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281718">Feature Item #2</a>
+                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281718">Phòng chờ VIP tại sân bay toàn cầu</a>
                             </div>
                             <div id="panel-element-281718" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche...
+                                    <ul>
+                                        <li>Với thẻ tín dụng Sacombank Visa Infinite, Quý khách có thể thoải mái nghỉ ngơi và thư giãn trong không gian sang trọng, thưởng thức các món ăn nhẹ tại phòng chờ VIP trước những chuyến bay. </li>
+                                        <li>Miễn phí thành viên thẻ Priority Pass</li>
+                                        <li>Quyền lợi sử dụng hơn 1000 phòng chờ VIP tại các sân bay toàn cầu không giới hạn số lượt</li>
+                                        <li>
+                                            Cho phép người thân của chủ thẻ sử dụng phòng chờ với mức giá 27USD/khách
+                                            Vui lòng tham khảo thêm “Hướng dẫn và Quy định sử dụng thẻ Priority Pass”
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281728">Feature Item #3</a>
+                                <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-26518" href="#panel-element-281728">Bảo hiểm du lịch toàn cầu và thanh toán thẻ</a>
                             </div>
                             <div id="panel-element-281728" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche...
+                                    <ul>
+                                        <li>Quý khách hoàn toàn an tâm du lịch  với gói bảo hiểm tai nạn toàn cầu với giá trị bồi thường lên đến 22 tỷ VNĐ (tương đương 1 triệu USD) và các bảo hiểm khác như: </li>
+                                        <li>Để kích hoạt gói bảo hiểm trên, Quý khách vui lòng thông báo về lịch trình chuyến bay qua tổng đài VIP Sacombank 1800.585823.</li>
+                                        <li>Quyền lợi sử dụng hơn 1000 phòng chờ VIP tại các sân bay toàn cầu không giới hạn số lượt</li>
+                                        <li>
+                                            Cho phép người thân của chủ thẻ sử dụng phòng chờ với mức giá 27USD/khách
+                                            Vui lòng tham khảo thêm “Hướng dẫn và Quy định sử dụng thẻ Priority Pass”
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -53,20 +88,28 @@
                             </div>
                             <div id="panel-element-281719" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche...
+                                    <ul>
+                                        <li>Với thẻ tín dụng Sacombank Visa Infinite, Quý khách có thể thỏa thích tận hưởng các ưu đãi cao cấp thường niên bao gồm dịch vụ Golf hoặc Spa tùy theo sở thích và đêm nghỉ dưỡng tại resort đẳng cấp.</li>
+                                        <li>Để kích hoạt gói bảo hiểm trên, Quý khách vui lòng thông báo về lịch trình chuyến bay qua tổng đài VIP Sacombank 1800.585823.</li>
+                                        <li>Quyền lợi sử dụng hơn 1000 phòng chờ VIP tại các sân bay toàn cầu không giới hạn số lượt</li>
+                                        <li>
+                                            Cho phép người thân của chủ thẻ sử dụng phòng chờ với mức giá 27USD/khách
+                                            Vui lòng tham khảo thêm “Hướng dẫn và Quy định sử dụng thẻ Priority Pass”
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-lg-12" style="margin-bottom:5px;">
-                    <button style="margin-left:15px;" class="btn-u" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn btn-primary pull-left"
+                    <button data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-info btn btn-primary pull-left"
                             value="">
                         So Sánh Thẻ
                     </button>
@@ -92,7 +135,7 @@
                         <label class="control-label" for="company">Chọn thẻ so sánh</label>
                         <select id="company" class="form-control" [(ngModel)]="selectedCard" (ngModelChange)="onSelect($event)">
                             <option disabled hidden [value]="selectUndefinedOptionValue">Chọn thẻ</option>
-                            <option *ngFor ="let item of cardes" [ngValue]="item" [disabled]="item === selectedCard">{{item.id}}-{{item.name}}</option>
+                            <option *ngFor="let item of cardes" [ngValue]="item" [disabled]="item === selectedCard">{{item.id}}-{{item.name}}</option>
                         </select>
                     </div>
                     <table *ngIf="selectedCard && selectedCard.id != card.id">
@@ -111,19 +154,21 @@
                         <tbody>
                             <tr *ngFor="let fea of features">
                                 <td>{{fea.name}}</td>
-                                <td><b class="check" *ngIf="HasFeature(card.features,fea.id); else Block">✔</b>
+                                <td>
+                                    <b class="check" *ngIf="HasFeature(card.features,fea.id); else Block">✔</b>
                                     <ng-template #Block>&mdash;</ng-template>
                                 </td>
-                                <td><b class="check" *ngIf="HasFeature(selectedCard.features,fea.id); else elseBlock">✔</b>
+                                <td>
+                                    <b class="check" *ngIf="HasFeature(selectedCard.features,fea.id); else elseBlock">✔</b>
                                     <ng-template #elseBlock>&mdash;</ng-template>
                                 </td>
                             </tr>
-                        
+
                         </tbody>
                     </table>
                 </div>
                 <!--end dropdown list  -->
-                
+
                 <p class="p">Demo by Adrian Sandu. <a href="#" target="_blank">See article</a>.</p>
             </div>
         </div>

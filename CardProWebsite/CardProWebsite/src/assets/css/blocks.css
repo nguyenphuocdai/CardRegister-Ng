@@ -150,32 +150,32 @@
 ----------------------------------------------------*/
 /*Promo Background Images*/
 .promo-bg-pattern-v1-dark {
-  background: url(../img/patterns/5.png) repeat;
+  background: url(../img/patterns/5.html) repeat;
 }
 
 .promo-bg-pattern-v1-light {
-  background: url(../img/patterns/16.png) repeat;
+  background: url(../img/patterns/16.html) repeat;
 }
 
 /*Promo Background Images*/
 .promo-bg-img-v1 {
-  background: url(../img/bg/img1.jpg) no-repeat;
+  background: url(../img/bg/img1.html) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v2 {
-  background: url(../img/bg/img5.jpg) no-repeat;
+  background: url(../img/bg/img5.html) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v3 {
-  background: url(../img/bg/img10.jpg) no-repeat;
+  background: url(../img/bg/img10.html) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v4 {
-  background: url(../img/bg/img11.jpg) no-repeat;
+  background: url(../img/bg/img11.html) no-repeat;
   background-size: cover;
 }
 .promo-bg-img-v5 {
-  background: url(../img/bg/img6.jpg) no-repeat;
+  background: url(../img/bg/img6.html) no-repeat;
   background-size: cover;
 }
 
@@ -249,11 +249,11 @@
   overflow: hidden;
   padding: 10px 0 6px;
   border-bottom: solid 1px #eee;
-  background: url(../img/patterns/breadcrumbs.png) repeat;
+  background: url(../img/patterns/breadcrumbs.html) repeat;
 }
 
 .video-business-img1 {
-  background: url(../video/youtube-business/video-business-img1.jpg) no-repeat center;
+  background: url(../video/youtube-business/video-business-img1.html) no-repeat center;
   background-size: cover; /*Scales the background image to be as large as possible*/
 }
 
@@ -353,7 +353,7 @@
 .breadcrumbs-v1 {
   padding: 100px 0;
   position: relative;
-  background: url(../img/breadcrumbs/img1.jpg) center no-repeat;
+  background: url(../img/breadcrumbs/img1.html) center no-repeat;
   background-size: cover; /*Scales the background image to be as large as possible*/
 }
 
@@ -404,7 +404,7 @@
 .breadcrumbs-v2 {
   text-align: center;
   position: relative;
-  background: url(../img/bg/11.jpg) no-repeat center;
+  background: url(../img/bg/11.html) no-repeat center;
 }
 
 .breadcrumbs-v2-in {
@@ -444,19 +444,19 @@
 }
 
 .breadcrumbs-v3.img-v1 {
-  background: url(../img/breadcrumbs/img1.jpg) no-repeat;
+  background: url(../img/breadcrumbs/img1.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .breadcrumbs-v3.img-v2 {
-  background: url(../img/breadcrumbs/img2.jpg) no-repeat;
+  background: url(../img/breadcrumbs/img2.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .breadcrumbs-v3.img-v3 {
-  background: url(../img/breadcrumbs/img3.jpg) no-repeat;
+  background: url(../img/breadcrumbs/img3.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -1006,7 +1006,7 @@
 /*Colored Content Boxes
 ------------------------------------*/
 .service-block {
-	padding: 60px 30px;
+	padding: 20px 30px;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -1923,7 +1923,7 @@
 .call-action-v2 {
   padding: 50px 0;
   text-align: center;
-  background: url(../img/patterns/16.png);
+  background: url(../img/patterns/16.html);
 }
 
 .call-action-v2 h2 {
@@ -2242,7 +2242,7 @@
   height: auto;
   padding: 50px 0;
   position: relative;
-  background: url(../img/bg/11.jpg) repeat fixed;
+  background: url(../img/bg/11.html) repeat fixed;
   background-size: cover;
 }
 
@@ -2263,7 +2263,7 @@
   height: auto;
   padding: 50px 0;
   position: relative;
-  background: url(../img/bg/7.jpg) repeat fixed;
+  background: url(../img/bg/7.html) repeat fixed;
 }
 
 .bg-image-v2:before {
@@ -2300,7 +2300,7 @@
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background: url(../img/team/faces.html) 50% 0 repeat fixed;
 }
 
 .parallax-quote:after {
@@ -2320,7 +2320,7 @@
   height: 100%;
   content: " ";
   position: absolute;
-  background: url(../img/patterns/gridtile.png) repeat;
+  background: url(../img/patterns/gridtile.html) repeat;
 }
 
 /*Parallax Quote Inner*/
@@ -2408,7 +2408,7 @@
 	[15. Parallax Team]
 ----------------------------------------------------*/
 .parallax-team {
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background: url(../img/team/faces.html) 50% 0 repeat fixed;
 }
 
 .parallax-team,
@@ -2429,7 +2429,7 @@
 
 /*Parallax Team*/
 .parallax-team {
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background: url(../img/team/faces.html) 50% 0 repeat fixed;
 }
 
 .parallax-team,
@@ -2445,14 +2445,14 @@
 	[16. Parallax Counter]
 ----------------------------------------------------*/
 .parallax-bg {
-  background: url(../img/patterns/5.png) repeat fixed;
+  background: url(../img/patterns/5.html) repeat fixed;
 }
 
 /*Parallax Counter
 ------------------------------------*/
 .parallax-counter {
   padding: 30px 0;
-  background: url(../img/patterns/5.png) repeat fixed;
+  background: url(../img/patterns/5.html) repeat fixed;
 }
 
 .parallax-counter .counters {
@@ -2474,7 +2474,7 @@
 ------------------------------------*/
 .parallax-counter-v1 {
   padding: 60px 0;
-  background: url(../img/patterns/5.png) repeat fixed;
+  background: url(../img/patterns/5.html) repeat fixed;
 }
 
 .parallax-counter-v1 .counters {
@@ -2499,7 +2499,7 @@
 .parallax-counter-v2 {
   position: relative;
   padding: 80px 0 60px;
-  background: url(../img/patterns/16.png) repeat fixed;
+  background: url(../img/patterns/16.html) repeat fixed;
 }
 
 .parallax-counter-v2:after {
@@ -2560,7 +2560,7 @@
 	overflow: hidden;
 	text-align: center;
 	position: relative;
-	background: url(../img/bg/25.jpg) 50% 0 fixed;
+	background: url(../img/bg/25.html) 50% 0 fixed;
 }
 
 .parallax-counter-v3:after {
@@ -2643,7 +2643,7 @@
   overflow: hidden;
   text-align: center;
   position: relative;
-  background: url(../img/bg/19.jpg) 50% 0 fixed;
+  background: url(../img/bg/19.html) 50% 0 fixed;
 }
 
 .parallax-counter-v4:after {
@@ -2684,7 +2684,7 @@
 ----------------------------------------------------*/
 .flat-bg-block-v1 {
   padding: 40px 0;
-  background: url(../img/patterns/16.png) repeat;
+  background: url(../img/patterns/16.html) repeat;
 }
 
 .flat-bg-block-v1 .checked-list.first-child {
@@ -3337,9 +3337,9 @@
 	[22. Quote]
 ----------------------------------------------------*/
 .quote-v1 {
-  padding: 170px 0 150px;
+  padding: 60px 0;
   text-align: center;
-  background: url(../img/patterns/5.png) repeat;
+  background: url(../img/patterns/5.html) repeat;
 }
 
 .quote-v1 p {
@@ -3497,19 +3497,19 @@
 }
 
 .interactive-slider-v1.img-v1 {
-  background: url(../img/bg/18.jpg) no-repeat;
+  background: url(../img/bg/18.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v1.img-v2 {
-  background: url(../img/bg/19.jpg) no-repeat;
+  background: url(../img/bg/19.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v1.img-v3 {
-  background: url(../img/bg/18.jpg) no-repeat;
+  background: url(../img/bg/18.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -3556,7 +3556,7 @@
   padding: 200px 0;
   position: relative;
   text-align: center;
-  background: url(../img/bg/18.jpg) no-repeat;
+  background: url(../img/bg/18.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -3566,66 +3566,33 @@
 }
 
 .interactive-slider-v2.img-v1 {
-  background: url(../img/bg/25.jpg) no-repeat;
+  background: url(../img/bg/25.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v2.img-v2 {
-  background: url(../img/bg/14.jpg) no-repeat;
+  background: url(../img/bg/14.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v2.img-v3 {
-  background: url(../img/bg/img8.jpg) no-repeat;
+  background: url(../img/bg/img8.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v2.img-v4 {
-  background: url(../img/bg/img9.jpg) no-repeat;
+  background: url(../img/bg/img9.html) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v2.intro-promo-img {
-  padding: 80px 0;
-  background: url(../img/intro/promo.jpg) repeat-x fixed center center / cover ;
-  -webkit-animation: infiniteBackground 65s linear infinite;
-  -moz-animation: infiniteBackground 65s linear infinite;
-  animation: infiniteBackground 65s linear infinite;
-}
-@media screen and (max-width: 992px) {
-  .interactive-slider-v2.intro-promo-img {
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
-  }
-}
-@keyframes infiniteBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 1024px 0;
-  }
-}
-@-webkit-keyframes infiniteBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 1024px 0;
-  }
-}
-@-moz-keyframe infiniteBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 1024px 0;
-  }
+  background: url(../img/intro/promo.html) no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .interactive-slider-v2:after {
@@ -4329,7 +4296,8 @@
 
 .blog-thumb .blog-thumb-hover:hover .hover-grad {
   opacity: 1;
-  transition: opacity 0.55s, transform 0.55s;
+  transform 0.55s;
+  transition: opacity 0.55s,
 }
 
 /*Blog Thumb Description*/
@@ -5210,7 +5178,7 @@
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: #333 url(../img/bg/19.jpg) 50% 0 fixed;
+  background: #333 url(../img/bg/19.html) 50% 0 fixed;
   background-size: cover;
   background-position: center center;
 }
@@ -5232,7 +5200,7 @@
   height: 100%;
   content: " ";
   position: absolute;
-  background: url(../img/patterns/gridtile.png) repeat;
+  background: url(../img/patterns/gridtile.html) repeat;
 }
 
 .parallax-twitter-in {
@@ -5281,7 +5249,7 @@
 .clients-section {
   padding: 60px 0;
   position: relative;
-  background: #333 url(../img/bg/7.jpg) 50% fixed;
+  background: #333 url(../img/bg/7.html) 50% fixed;
   background-size: cover;
   background-position: center center;
 }
@@ -5303,7 +5271,7 @@
   height: 100%;
   content: " ";
   position: absolute;
-  background: url(../img/patterns/gridtile.png) repeat;
+  background: url(../img/patterns/gridtile.html) repeat;
 }
 
 .clients-section .title-v1 p,
@@ -6301,7 +6269,8 @@
 	background: #e74c3c;
 	border-color: #e74c3c;
 	text-decoration: none;
-	transition: all 0.25s, transform 0.25s;
+	transition: all 0.25s,
+	transform 0.25s;
 }
 
 /*--------------------------------------------------
@@ -6312,7 +6281,7 @@
 .purchase {
 	padding: 25px 0 30px;
 	border-bottom: solid 1px #eee;
-	background: url(../img/patterns/breadcrumbs.png) repeat;
+	background: url(../img/patterns/breadcrumbs.html) repeat;
 }
 
 .purchase p {
@@ -6608,7 +6577,7 @@ a.thumbnail {
 	color: #fff;
 	padding: 1px 6px;
 	position: absolute;
-	background: #11aeb6;
+	background: #72c02c;
 	display: inline-block;
 }
 .thumbnail-style a.btn-more:hover {
@@ -7745,7 +7714,7 @@ img.img-mouse {
 .service-info {
 	position: relative;
 	padding: 40px 0 50px;
-	background: url(../img/patterns/17.png) repeat;
+	background: url(../img/patterns/17.html) repeat;
 }
 
 .service-info .info-description {
@@ -7796,7 +7765,7 @@ img.img-mouse {
 ------------------------------------*/
 .testimonials-bs {
   padding: 50px 0;
-  background: url(../img/bg/16.jpg) 50% 0 repeat fixed;
+  background: url(../img/bg/16.html) 50% 0 repeat fixed;
 }
 
 .testimonials-bs .headline-center-v2 span.author {

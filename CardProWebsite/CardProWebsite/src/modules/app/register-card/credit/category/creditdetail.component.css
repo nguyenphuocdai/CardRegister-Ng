@@ -92,6 +92,9 @@ td:first-child {
   font-weight: bold;
   color: black;
 }
+li {
+    margin-left: 5px;
+}
 
 @media screen and (max-width: 768px) {
   .check {

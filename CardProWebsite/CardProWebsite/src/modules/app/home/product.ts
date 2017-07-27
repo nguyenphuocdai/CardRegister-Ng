@@ -6,6 +6,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 @Component({
     selector: 'product',
     templateUrl: './product.html',
+    styleUrls: ['./product.css']
 })
 export class ProductComponent implements OnInit {
     public allProducts = PRODUCT;
@@ -14,10 +15,17 @@ export class ProductComponent implements OnInit {
     public numberOfResults = 5;
     private timer;
 
+    public showProduct = [
+        { name: 'Thẻ thanh toán', url: '../src/assets/img/card1.jpg', describe: 'Thanh toán', title: 'Thanh toán' },
+        { name: 'Thẻ tín dụng', url: '../src/assets/img/card2.jpg', describe: 'Tín dụng', title: 'Tín dụng' },
+        { name: 'Thẻ in hình', url: '../src/assets/img/card3.jpg', describe: 'in hình', title: 'in hình' },
+    ];
+
     constructor( @Inject(DOCUMENT)
     private document: Document) {
       
     }
+
     ngOnInit() { }
 
     getItems() {
@@ -48,21 +56,5 @@ export class ProductComponent implements OnInit {
             }
         }, 1000);
     }
-
-    //addItems(startIndex, endIndex) {
-    //    for (let i = 0; i < this.sum; ++i) {
-    //        this.product.push([i, ' ', this.generateWord()].join(''));
-    //    }
-    //}
-    //onScrollDown() {
-    //    console.log('scrolled!!');
-
-    //    const start = this.sum;
-    //    this.sum += 5;
-    //    this.addItems(start, this.sum);
-    //}
-    //generateWord() {
-    //    return chance.word();
-
    
 }
